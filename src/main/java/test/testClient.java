@@ -44,7 +44,7 @@ public class testClient {
 		options.setSocketFactory(ctx.getSocketFactory());
 		options.setAutomaticReconnect(true);// 启动自动重连
 
-		client = new MqttClient(endpoint, "java_device");
+		client = new MqttClient(endpoint, String.valueOf(System.currentTimeMillis()));
 		client.connect(options);
 
 		// 默认事件处理
